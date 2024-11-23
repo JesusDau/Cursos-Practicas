@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: pink;
+}
+
+header .contenedor{
+    background-color: rgb(245, 12, 233);
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header .logo{
+    margin: 0;
+    box-sizing: border-box;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header .logo img{
+    vertical-align: top;
+    
+}
+
+header .logo p{
+    font-family: "Style Script", cursive;
+    font-weight:bold;
+    font-style: normal;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+header nav{
+    width: 50%;
+    padding: 10px;
+}
+
+header nav ul{
+    list-style: none;
+    display:flex;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav ul a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+header nav ul a button{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.contenedor{
+    max-width: 1250px;
+    width: 100%;
+    margin: 1.6em auto;
+    background-color: rgba(199, 134, 110, 0.932);
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5,1fr);
+
+
+}
+
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer,
+.contenedor .div{
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 8);
+}
+
+.contenedor header, .contenedor .footer{
+    background-color: rgba(199, 134, 110, 0.932);
+    grid-column: 1/6;
+}
+
+.contenedor .contenido{
+    background-color: rgb(255, 129, 223);
+    grid-column: span 3;
+}
+
+.contenido .articulo{
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.contenido .articulo h3,
+.contenido .articulo p{
+    padding: 10px;
+}
+
+.contenedor .sidebar{
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor .sidebar img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.contenedor .promociones{
+    height: 180px;
+    border: 1px solid crimson;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedor .contenido {
+        grid-column: 1/6;
+    }
+
+    .contenedor .sidebar{
+        grid-column: 1/6;
+    }
+
+    .contenedor .promociones{
+        grid-column: 1/6;
+    }
+}

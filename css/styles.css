@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   margin: 0;
+   height: 100%;
+   background-color: pink;
+}
+
+.contenedor{
+    max-width: 1250px;
+    height: auto;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+header .contenedor{
+    background-color: rgb(245, 12, 233);
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header .logo{
+    margin: 0;
+    box-sizing: border-box;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header .logo img{
+    vertical-align: top;
+    
+}
+
+header .logo p{
+    font-family: "Style Script", cursive;
+    font-weight:bold;
+    font-style: normal;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+header nav{
+    width: 50%;
+    padding: 10px;
+}
+
+header nav ul{
+    list-style: none;
+    display:flex;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav ul a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+header nav ul a button{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+}
+
+main .contenedor{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction:column;
+}
+
+main .promocion{
+    max-width: 100%;
+    max-height: 50%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+}
+
+main .promocion img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid;
+}
+
+main .promocion .texto-encima{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+
+}
+
+.promocion .texto-encima a button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 20px 20px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+}
+
+#servicios{
+    background-color: hotpink;
+    margin: 0;
+    padding: 5px 5px;
+    font-size: 12px;
+    
+}
+
+#servicios .container{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    padding: 5px 5px;
+    
+}
+
+#servicios .container .card{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
