@@ -50,10 +50,10 @@ header nav{
 header nav ul{
     list-style: none;
     display:flex;
-    justify-content:space-around;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content:center;
+    flex-direction: column;
+    align-items:end;
+    flex-wrap:wrap;
 }
 
 header nav ul a{
@@ -153,5 +153,14 @@ header nav ul a button{
         padding: 1em;
         text-align: left;
     }
+    
+    header nav ul{
+        display:flex;
+        justify-content:space-between;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap:wrap;
+    }
+    
 }
 
