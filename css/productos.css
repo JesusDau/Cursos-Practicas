@@ -5,19 +5,10 @@
 }
 
 body{
-   margin: 0;
-   height: 100%;
-   background-color: pink;
-}
-
-.contenedor{
-    max-width: 1250px;
-    height: auto;
-    margin: 1.0em auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: pink;
+    margin: 0;
+    height: 100%;
 }
 
 header .contenedor{
@@ -32,10 +23,10 @@ header .contenedor{
 }
 
 header .logo{
-    margin: 0 10px;
+    margin: 0;
     box-sizing: border-box;
     display:flex;
-    justify-content:space-around;
+    justify-content:flex-start;
     align-items:center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -84,78 +75,77 @@ header nav ul a button{
     color: white;
 }
 
-main .contenedor{
-    width: 100%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction:column;
-}
-
-main .promocion{
-    max-width: 100%;
-    max-height: 50%;
-    position: relative;
-    display: inline-block;
+.titulo {
     text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#productos {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    padding: 0px 10px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
 
 }
 
-main .promocion img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border: 2px solid;
+.producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-main .promocion .texto-encima{
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    
+#carrito {
+    margin-top: 20px;
+    background-color: rgb(245, 12, 233);
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-.promocion .texto-encima a button{
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 20px 20px;
-    border-radius: 5px;
-    background-color: blueviolet;
+button {
+    background-color:rgb(233, 122, 233);
+    color:black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover {
+    background-color:rgb(245, 12, 31);
+}
+.agotado {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.descuento {
     color: white;
+    font-weight: bold;
 }
-
-#servicios{
-    background-color: hotpink;
-    margin: 0;
-    padding: 5px 5px;
-    font-size: 12px;
-    
+#checkout-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
 }
-
-#servicios .container{
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-start;
-    flex-direction: row;
-    flex-wrap:nowrap;
-    padding: 5px 5px;
-    
-}
-
-#servicios .container .card{
-    width: 25%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
+.checkout-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
 }
 
 
 @media only screen and (max-width: 768px) {
-    
+
     header .contenedor{
         background-color: rgb(245, 12, 233);
         width: 100%;
@@ -176,25 +166,11 @@ main .promocion .texto-encima{
         flex-wrap: wrap;
     }
 
-    main .promocion .texto-encima{
-        position: absolute;
-        top: 40%;
-        left: 15%;
-        transform: translate(-20%, -20%);
-        font-size: 12px;
-        color: white;
-
-    }
-
-   /*  .container {
-        display: flex;
+    #productos {
+        display:flex;
         justify-content: space-between;
-        align-items:center;
+        align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
-        padding: 5px 5px;
-
-    }*/ 
-
-
+    }
 }

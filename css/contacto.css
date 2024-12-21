@@ -131,6 +131,13 @@ header nav ul a button{
     font-weight: bold;
 }
 
+.formulario form button:hover,
+.formulario form button:focus {
+    background: rgb(155, 17, 87);
+    transition:background-color 1s ease-out;
+    outline: 0;
+    
+}
 
 .info{
     background-color: rgb(245, 12, 233);
@@ -139,6 +146,17 @@ header nav ul a button{
 .info h4, .info p{
     text-align: center;
     margin: 0 0 1rem 0;
+}
+
+.info .iconos {
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    padding: 25px 25px;
+
+    
 }
 
 
